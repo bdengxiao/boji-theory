@@ -1,0 +1,13 @@
+{
+  "name": "boji-theory",
+  "version": "1.0.0",
+  "private": true,
+  "description": "薄肌理论网站本地预览",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "SEE LICENSE IN LICENSE"
+}

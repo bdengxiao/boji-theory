@@ -1,0 +1,120 @@
+/* Phone layout: keep the artwork, actions and reading usable at thumb distance. */
+.image-button img[hidden] { display: none; }
+@media (max-width: 700px) {
+  body { font-size: 16px; -webkit-text-size-adjust: 100%; }
+  .masthead { min-height: 88px; padding: 10px 16px 0; }
+  .wordmark { font-size: 21px; }
+  .local-mark { font-size: 10px; }
+  .masthead nav { margin-top: 3px; gap: 8px; font-size: 14px; }
+  .masthead nav a { min-height: 44px; display: flex; align-items: center; padding: 8px 4px; }
+  .page { padding: 22px 16px 40px; }
+  .book-title { padding-bottom: 14px; }
+  .book-title h1 { font-size: clamp(38px, 11vw, 48px); letter-spacing: -.03em; }
+  .book-title .edition { font-size: 14px; margin-top: 5px; }
+  .motion-toolbar { margin-bottom: 18px; padding: 8px 0 12px; }
+  .motion-toolbar > p { display: none; }
+  .motion-toolbar > div { gap: 10px; }
+  .motion-toolbar .tool { min-height: 44px; font-size: 13px; }
+  .hero { gap: 18px; }
+  .hero-text { display: contents; }
+  .hero .meme-caption { display: none; }
+  .hero-quote { order: 0; }
+  .hero .quote-source { order: 1; }
+  .hero-figure { order: 2; }
+  .hero-intro { order: 3; }
+  .hero .actions { order: 4; }
+  .hero-text > .small { order: 5; }
+  .hero-quote { font-size: clamp(34px, 10.5vw, 44px); line-height: 1.25; margin-top: 12px; letter-spacing: -.03em; }
+  .hero-quote br { display: none; }
+  .hero-quote span { padding-inline: 4px; }
+  .hero .quote-source { font-size: 12px; line-height: 1.65; margin-top: 10px; }
+  .hero-intro { font-size: 16px; line-height: 1.7; margin-top: 12px; }
+  .hero .actions { margin-top: 14px; gap: 10px; }
+  .hero .action { min-height: 52px; font-size: 14px; padding: 11px 10px; }
+  .home-page .hero-figure .image-button { height: clamp(240px, 72vw, 340px); }
+  .hero-figure figcaption { font-size: 12px; line-height: 1.6; }
+  .slide-controls { margin-top: 10px; gap: 12px; }
+  .slide-controls > button { min-width: 72px; min-height: 44px; font-size: 14px; }
+  .slide-status { font-size: 12px; }
+  /* One fading quote in its own strip: never cover a heading, link or artwork. */
+  .quote-field { position: relative; inset: auto; width: 100%; height: 126px; margin: 12px 0 0; z-index: 1; }
+  .floating-quote { max-width: calc(100% - 44px); font-size: 19px; padding: 9px 12px; }
+  .floating-quote small { font-size: 11px; line-height: 1.6; }
+  .quote-dock { bottom: max(12px, env(safe-area-inset-bottom)); left: 12px; right: 12px; width: auto; max-width: none; max-height: 76vh; }
+  .quote-dock-top { position: sticky; top: -18px; background: var(--paper); padding-block: 8px; }
+  .quote-source-row .quote-note, .quote-source-row > a { font-size: 14px; }
+  .section { padding: 26px 0; }
+  .section-head { gap: 12px; align-items: center; }
+  .section-head h2 { font-size: 27px; }
+  .section-head .inline-link { font-size: 14px; min-height: 44px; display: inline-flex; align-items: center; }
+  .home-art-grid, .album-grid { gap: 22px 12px; }
+  .home-art-grid .art img { height: clamp(150px, 48vw, 210px); }
+  .home-art-grid .art h3, .album-art h2 { font-size: 14px; line-height: 1.6; }
+  .home-art-grid .art figcaption, .album-art figcaption { font-size: 12px; }
+  .home-page .small { font-size: 13px; line-height: 1.75; }
+  .quiz-spot h2, .quote-invite h2 { font-size: 30px; }
+  .quiz-spot p, .quote-invite p { font-size: 16px; }
+  .sample-options button { min-height: 48px; font-size: 16px; }
+  .chapter-row { gap: 12px; }
+  .chapter-row b { font-size: 16px; line-height: 1.7; }
+  .chapter-row span { font-size: 12px; }
+  .quiz-header { padding-bottom: 24px; }
+  .quiz-header h1 { font-size: 36px; letter-spacing: -.03em; }
+  .quiz-header p, .mode p, .quiz-notice { font-size: 16px; line-height: 1.8; }
+  .mode-list { padding: 26px 0; gap: 28px; }
+  .mode .action { width: 100%; }
+  .question-top { font-size: 12px; gap: 8px; flex-wrap: wrap; }
+  .question-top > a { min-height: 44px; display: inline-flex; align-items: center; margin-right: auto; }
+  .progress-track { margin: 10px 0 18px; }
+  .question-shell .theory-context { margin-top: 12px; }
+  .question-shell h1 { font-size: 23px; line-height: 1.6; letter-spacing: -.02em; margin-bottom: 16px; }
+  .theory-tag, .theory-tag > span { font-size: 13px; }
+  .theory-source, .question-shell > .small { font-size: 14px; }
+  .theory-source summary { min-height: 44px; }
+  .answer { font-size: 16px; line-height: 1.65; padding: 16px 10px; min-height: 68px; gap: 12px; }
+  .answer-letter { width: 30px; height: 30px; font-size: 14px; }
+  .question-image { grid-template-columns: 105px minmax(0, 1fr); gap: 12px; }
+  .question-image p { font-size: 14px; }
+  .question-image img { height: 140px; }
+  .question-bottom { position: sticky; bottom: 0; z-index: 14; display: grid; grid-template-columns: 1fr 1.5fr; padding: 12px 0 max(12px, env(safe-area-inset-bottom)); background: var(--paper); border-top: 1px solid var(--line); }
+  .question-bottom .action { min-height: 50px; justify-content: center; font-size: 16px; padding: 10px; }
+  .question-map { gap: 10px; }
+  .question-map button { min-width: 44px; min-height: 44px; font-size: 14px; }
+  .question-shell details > summary { font-size: 14px; min-height: 44px; }
+  .result-title { font-size: clamp(29px, 8.5vw, 36px); line-height: 1.4; letter-spacing: -.025em; }
+  .result-intro { padding-top: 4px; padding-bottom: 26px; margin-bottom: 24px; }
+  .result-intro > p:first-child { font-size: 13px; margin-bottom: 14px; }
+  .result-intro > p:last-child, .discussion p, .discussion blockquote { font-size: 16px; line-height: 1.85; }
+  .dimension-label, .discussion h3 { font-size: 16px; }
+  .dimension .small, .result-note, .result-layout > div > .small { font-size: 14px; line-height: 1.8; }
+  .result-layout { gap: 28px; }
+  .share-preview { width: 100%; max-width: 390px; }
+  .share-preview p { font-size: 14px; }
+  .result-recs h2 { font-size: 26px; }
+  .reading { padding: 18px 16px 40px; }
+  input[type=search], select { font-size: 16px; }
+  .reading aside > label { font-size: 13px; }
+  .reader-controls { position: sticky; top: 0; z-index: 14; padding: 10px 0; background: var(--paper); margin-bottom: 24px; gap: 6px; }
+  .reader-controls .tools { gap: 8px; width: 100%; justify-content: space-between; }
+  .reader-controls .tool, .reader-controls select { min-height: 44px; font-size: 14px; }
+  .reader-controls label { font-size: 13px; }
+  .reader h1 { font-size: 26px; line-height: 1.5; }
+  .reading-meta { font-size: 13px; margin-bottom: 24px; }
+  .prose { line-height: 1.85; }
+  .prose figcaption { font-size: 13px; }
+  .toc-item { font-size: 15px; min-height: 48px; }
+  .tool { min-height: 44px; }
+  .full-album h1, .quote-library > h1 { font-size: 38px; }
+  .album-tools { align-items: stretch; flex-wrap: wrap; }
+  .album-tools label { flex-basis: 100%; font-size: 14px; }
+  .album-filters { gap: 8px; }
+  .album-filters .tool, .quote-filters .tool { font-size: 14px; min-height: 44px; }
+  .album-art .image-button { height: clamp(160px, 52vw, 230px); }
+  .album-art .inline-link { font-size: 14px; min-height: 44px; display: inline-flex; align-items: center; }
+  .about-page p, .about-page ul, .quote-library > p { font-size: 16px; }
+  .quote-identity, .quote-wall-row .small { font-size: 14px; }
+  .quote-wall-row h2 { font-size: 26px; }
+  footer { margin-inline: 16px; font-size: 13px; }
+  footer a { min-height: 44px; display: inline-flex; align-items: center; }
+  #toast { bottom: max(16px, env(safe-area-inset-bottom)); font-size: 14px; }
+}
